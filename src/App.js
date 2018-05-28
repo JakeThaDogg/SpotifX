@@ -7,7 +7,7 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      token: 'BQDPo1nwe-aj0r2Y1qvGPzQX3KqgxYLeoAh-DA9hGkCRpysYkbXybbi_8jZaon3dOYozpecsIoyJGQr6HaB7nHwn5e7Ps74NR6x8rhDPlo9dOcCr2ViZeE9gezZQoS0S0w6FNrS_zjjrirEkQKoWG2VSPiiZ3lqfNw'
+      token: 'BQDztRpL2IANJGSVX4Fr9ljTVH7FreMLaq15LY7WWznqmETsIQXG5gQbSCtJwirmcsd-sYvHbR6EeB-57nGwXzZbl-2oXitL-6vcnK5ezG0Co7EqdNVYdnXoSPpfRYGmDYOPCX3BrCS8wudtflk8FxB_FqD6dR7FQA'
     }
   }
 
