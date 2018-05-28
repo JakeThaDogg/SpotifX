@@ -12,7 +12,7 @@
   height: 150px;
   padding: 2em;
   color: #FFFFFF;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .App-header span  {
@@ -29,6 +29,18 @@
 }
 li{
   list-style: none;
+}
+
+input{
+  margin-top: 2em;
+}
+
+NavLink{
+  margin-right: 3em;
+}
+
+#welc{
+  margin-top: 3em;
 }
 
 @keyframes App-logo-spin {
