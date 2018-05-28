@@ -10,7 +10,7 @@ export default class Artist extends React.Component {
       tracks: []
     }
   }
-  componentDidMount () {
+  componentWillUpdate () {
     axios({
       method: 'get',
       baseURL: `https://api.spotify.com/v1/artists/${this.props.id}/top-tracks?country=FR`,
@@ -35,13 +35,12 @@ export default class Artist extends React.Component {
         for (let i = 0; i < result.length; i++) {
           let inst = new Trac(result[i].id, result[i].name, result[i].album.name, result[i].preview_url, result[i].explicit, result[i].popularity)
           tra.push(inst)
-          console.log(inst)
         }
         this.setState({tracks: tra})
       })
   }
 
-  componentWillUnmount () {
+  componentDidMount () {
     this.setState({tracks: []})
   }
 
