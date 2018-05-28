@@ -24,8 +24,8 @@ export default class Spotify extends React.Component {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
       }).then(function (res) {
+        const RESULT = res.data.artists.items
         function Art (id, name, followers, genres, pop, img) {
-
           this.id = id
           this.name = name
           this.followers = followers
@@ -36,17 +36,14 @@ export default class Spotify extends React.Component {
 
         let tab = []
 
-
-        const result = res.data.artists.items
-
-        for (let i = 0; i < result.length; i++) {
+        for (let i = 0; i < RESULT.length; i++) {
           let ima
-          if (result[i].images[0] === undefined) {
+          if (RESULT[i].images[0] === undefined) {
             ima = ''
           } else {
-            ima = result[i].images[0].url
+            ima = RESULT[i].images[0].url
           }
-          let inst = new Art(result[i].id, result[i].name, result[i].followers.total, result[i].genres.map((genre) => { return (<li>{genre}</li>) }), result[i].popularity, ima)
+          let inst = new Art(RESULT[i].id, RESULT[i].name, RESULT[i].followers.total, RESULT[i].genres.map((genre) => { return (<li>{genre}</li>) }), RESULT[i].popularity, ima)
           tab.push(inst)
         }
         self.setState({artRes: tab})
