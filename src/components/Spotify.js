@@ -52,7 +52,7 @@ export default class Spotify extends React.Component {
   }
   render () {
     return (<div>
-      <input onChange={this.changeHandler} />
+      <input onChange={this.changeHandler} placeholder='Search for an artist' />
       {
         this.state.artRes.map((artist, index) => {
           return (
