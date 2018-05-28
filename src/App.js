@@ -23,8 +23,8 @@ class App extends Component {
         </header>
         <h3 id='welc'> What are you searching for ?</h3>
         <hr />
-        <NavLink exact to='/tracksrch' activeStyle={{color: '#1DB954'}}>A song</NavLink>
-        <NavLink exact to='/artistsrch' activeStyle={{color: '#1DB954'}}>An Artist </NavLink>
+        <NavLink exact to='/tracksrch' activeStyle={{color: '#1DB954'}} className='link'>A song</NavLink>
+        <NavLink exact to='/artistsrch' activeStyle={{color: '#1DB954'}} className='link'>An Artist </NavLink>
         <Switch>
           <Route path='/tracksrch' render={() => <SearchT token={this.state.token} />} />
           <Route path='/artistsrch' render={() => <Spotify token={this.state.token} />} />
