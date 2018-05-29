@@ -19,7 +19,7 @@ export default class Track extends React.Component {
   render () {
     if (!this.state.isClick) {
       return (
-        <p className='track'> {this.props.name} | {this.props.albName} | {this.props.pop} | <button type='button' className='listen'onClick={this.handleClick}>Listen Me !</button></p>
+        <p className='track'> {this.props.name} | {this.props.albName} | {this.props.pop} | <button type='button' className='listen' onClick={this.handleClick}>Listen Me !</button></p>
       )
     } else {
       return (
