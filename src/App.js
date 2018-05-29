@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
+import {Route, BrowserRouter, Switch, NavLink} from 'react-router-dom'
 import logo from './logo.svg';
 import './css/App.css';
 import Spotify from './components/Spotify'
+import SearchT from './components/SearchT'
 
 class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      token: 'BQDztRpL2IANJGSVX4Fr9ljTVH7FreMLaq15LY7WWznqmETsIQXG5gQbSCtJwirmcsd-sYvHbR6EeB-57nGwXzZbl-2oXitL-6vcnK5ezG0Co7EqdNVYdnXoSPpfRYGmDYOPCX3BrCS8wudtflk8FxB_FqD6dR7FQA'
+      token: 'BQDc2GJ-9LQ5gYYJs0yA9TeU6WxOmjLGOF3zx3zI-L_syosDcnAph9yXqO-P9KwyF8-mlsj7LTeHW-0KRcS1hN1lqe_rZzrF2GT0CHgpLaF_rd5U3Vudj8zV75q8t7a_c9Kzb49DeWwJA9TRoz-GjYM55YClvtd8WA'
     }
   }
 
   render() {
-    return (
+    return ( <BrowserRouter>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Spotif<span>x </span></h1>
+          <h1>Welcome to</h1>
+          <h2 className="App-title">Spotif<span>x </span></h2>
         </header>
-        <Spotify token={this.state.token} />
+        <h3 id='welc'> What are you searching for ?</h3>
+        <hr />
+        <NavLink exact to='/tracksrch' activeStyle={{color: '#1DB954'}} className='link'>A song</NavLink>
+        <NavLink exact to='/artistsrch' activeStyle={{color: '#1DB954'}} className='link'>An Artist </NavLink>
+        <Switch>
+          <Route path='/tracksrch' render={() => <SearchT token={this.state.token} />} />
+          <Route path='/artistsrch' render={() => <Spotify token={this.state.token} />} />
+        </Switch>
       </div>
+    </BrowserRouter>
     );
   }
 }

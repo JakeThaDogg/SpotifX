@@ -58,8 +58,8 @@ export default class Artist extends React.Component {
           {
           this.state.tracks.map((track, i) => {
             return (
-              <li key={i}>
-                <Track name={track.name} albName={track.albName} pop={track.pop} prev={track.prev} />
+              <li>
+                <Track key={i} name={track.name} albName={track.albName} pop={track.pop} prev={track.prev} />
               </li>
             )
           })
