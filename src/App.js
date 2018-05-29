@@ -9,11 +9,11 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      token: 'BQDc2GJ-9LQ5gYYJs0yA9TeU6WxOmjLGOF3zx3zI-L_syosDcnAph9yXqO-P9KwyF8-mlsj7LTeHW-0KRcS1hN1lqe_rZzrF2GT0CHgpLaF_rd5U3Vudj8zV75q8t7a_c9Kzb49DeWwJA9TRoz-GjYM55YClvtd8WA'
+      token: 'BQA25Bt5ujbg_5_imIga_O6BYLpEOqDD2kqmJZ2H942MFjnNVBvOeby3JPwTJdUD3oSE_7h3x54a4E6FrVsuK-MLNuA19xGz2llzDJCzQCYZJJU1L1QXcRDRkB7fdoDHEvTa08eQ7ldtw4D5oRdramFXSXKRzJVBRQ'
     }
   }
 
-  render() {
+  render () {
     return ( <BrowserRouter>
       <div className="App">
         <header className="App-header">

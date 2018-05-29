@@ -56,7 +56,7 @@ export default class SearchT extends React.Component {
           this.state.resTra.map((trac, i) => {
             return (
               <ul>
-                <TrackSrch name={trac.name} artistName={trac.artistName} albName={trac.albName} pop={trac.pop} img={trac.img} />
+                <TrackSrch key={i} name={trac.name} artistName={trac.artistName} albName={trac.albName} pop={trac.pop} img={trac.img} />
               </ul>
             )
           })

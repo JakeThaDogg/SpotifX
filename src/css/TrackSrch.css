@@ -1,21 +1,33 @@
 .trackSrch{
   color: #FFFFFF;
-  background-size: contain;
+  margin-top: 1.5em;
+  margin-bottom: 3.5em;
 }
 
 
 .buttonSrch{
-  border-color: #1DB954;
+  width: 75px;
+  height: 75px;
   color: #FFFFFF;
-  font-size: 1em;
-  width: 100px;
-  height: 100px;
+  margin-left: 2em;
+  border-color: #1DB954;
   border-width: 3.5px;
-  transition: border-color 0.7s, background-color 0.5s, color 0.2s, border-radius 0.2s;
+  opacity: 0.55;
+  transition: border-radius 0.5s;
 }
 
+.playButton{
+  width: 50px;
+  height: 50px;
+  transition: opacity 0.4s;
+}
+
+
 .buttonSrch:hover {
-  border-color: #FFFFFF;
-  color: #1DB954;
-  border-radius: 0.75em;
+  opacity: 1;
+  border-radius: 1.15em;
+}
+
+.buttonSrch:hover .playButton{
+  opacity: 0
 }
