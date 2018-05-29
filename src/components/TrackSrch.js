@@ -20,11 +20,11 @@ export default class TrackSrch extends React.Component {
     let uri = this.props.img
     if (!this.state.isClick) {
       return (
-        <p className='track'> {this.props.name} | {this.props.artistName} | {this.props.albName} | {this.props.pop} | <button style={{ backgroundImage: `url(${uri})` }} type='button' className='listen' onClick={this.handleClick}>Listen Me !</button></p>
+        <p className='trackSrch'> {this.props.name} | {this.props.artistName} | {this.props.albName} | {this.props.pop} | <button style={{ backgroundImage: `url(${uri})`, backgroundSize: 'contain' }} type='button' className='buttonSrch' onClick={this.handleClick}>Listen Me !</button></p>
       )
     } else {
       return (
-        <p className='track'> {this.props.name} | {this.props.artistName} | {this.props.albName} | {this.props.pop} <br /> <audio controls><source src={this.props.prev} type='audio/mpeg' /></audio></p>
+        <p className='trackSrch'> {this.props.name} | {this.props.artistName} | {this.props.albName} | {this.props.pop} <br /> <audio controls><source src={this.props.prev} type='audio/mpeg' /></audio></p>
       )
     }
   }
