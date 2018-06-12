@@ -56,8 +56,8 @@ export default class Spotify extends React.Component {
       {
         this.state.artRes.map((artist, index) => {
           return (
-            <ul>
-              <Artist key={index} id={artist.id} name={artist.name} genres={artist.genres} followers={artist.followers} popularity={artist.pop} img={artist.img} token={this.props.token} />
+            <ul key={index}>
+              <Artist id={artist.id} name={artist.name} genres={artist.genres} followers={artist.followers} popularity={artist.pop} img={artist.img} token={this.props.token} />
             </ul>
           )
         })

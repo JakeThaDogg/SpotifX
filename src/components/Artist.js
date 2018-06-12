@@ -33,14 +33,21 @@ export default class Artist extends React.Component {
         let result = res.data.tracks
         let tra = []
         for (let i = 0; i < result.length; i++) {
-          let inst = new Trac(result[i].id, result[i].name, result[i].album.name, result[i].preview_url, result[i].explicit, result[i].popularity)
+          let inst = new Trac(
+            result[i].id,
+            result[i].name,
+            result[i].album.name,
+            result[i].preview_url,
+            result[i].explicit,
+            result[i].popularity
+          )
           tra.push(inst)
         }
         this.setState({tracks: tra})
       })
   }
 
-  componentDidMount () {
+  componentWillUnmount () {
     this.setState({tracks: []})
   }
 
@@ -54,7 +61,7 @@ export default class Artist extends React.Component {
         <p> Genre: {this.props.genres} </p>
         <p> {this.props.name} has {this.props.popularity} on 100 points of popularity </p>
 
-        <p> Top tracks :
+        <div> Top tracks :
           {
           this.state.tracks.map((track, i) => {
             return (
@@ -64,7 +71,7 @@ export default class Artist extends React.Component {
             )
           })
         }
-        </p>
+        </div>
       </div>
     )
   }

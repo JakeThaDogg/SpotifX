@@ -20,11 +20,32 @@ export default class Track extends React.Component {
   render () {
     if (!this.state.isClick) {
       return (
-        <p className='track'> {this.props.name} | {this.props.albName} | {this.props.pop} <img onClick={this.handleClick} className='playButtonTr' src={this.state.playButton} alt='play button' /> </p>
+        <p className='track'>
+          {this.props.name} |
+          {this.props.albName} |
+          {this.props.pop}
+          <img
+            onClick={this.handleClick}
+            className='playButtonTr'
+            src={this.state.playButton}
+            alt='play button'
+          />
+        </p>
       )
     } else {
       return (
-        <p className='track'> {this.props.name} | {this.props.albName} | {this.props.pop} <br /> <audio controls><source src={this.props.prev} type='audio/mpeg' /></audio></p>
+        <p className='track'>
+          {this.props.name} |
+          {this.props.albName} |
+          {this.props.pop}
+          <br />
+          <audio controls>
+            <source
+              src={this.props.prev}
+              type='audio/mpeg'
+            />
+          </audio>
+        </p>
       )
     }
   }

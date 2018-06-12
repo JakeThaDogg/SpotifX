@@ -14,7 +14,6 @@ export default class SearchT extends React.Component {
 
   searchHandle (e) {
     this.setState({search: e.target.value})
-    console.log(this.state.search)
     let self = this
     if (e.target.value.length >= 2) {
       axios({
@@ -40,7 +39,16 @@ export default class SearchT extends React.Component {
         let tab = []
         let data = res.data.tracks.items
         for (let i = 0; i < data.length; i++) {
-          let inst = new Tra(data[i].id, data[i].name, data[i].artists[0].name, data[i].album.images[0].url, data[i].album.name, data[i].preview_url, data[i].explicit, data[i].popularity)
+          let inst = new Tra(
+            data[i].id,
+            data[i].name,
+            data[i].artists[0].name,
+            data[i].album.images[0].url,
+            data[i].album.name,
+            data[i].preview_url,
+            data[i].explicit,
+            data[i].popularity
+          )
           tab.push(inst)
         }
         self.setState({resTra: tab})
@@ -55,8 +63,8 @@ export default class SearchT extends React.Component {
         {
           this.state.resTra.map((trac, i) => {
             return (
-              <ul>
-                <TrackSrch key={i} name={trac.name} artistName={trac.artistName} albName={trac.albName} pop={trac.pop} img={trac.img} />
+              <ul key={i}>
+                <TrackSrch name={trac.name} artistName={trac.artistName} albName={trac.albName} pop={trac.pop} img={trac.img} />
               </ul>
             )
           })

@@ -21,7 +21,7 @@ export default class TrackSrch extends React.Component {
     let uri = this.props.img
     if (!this.state.isClick) {
       return (
-        <p className='trackSrch'> {this.props.name} | {this.props.artistName} | {this.props.albName} | {this.props.pop} <button style={{ backgroundImage: `url(${uri})`, backgroundSize: 'contain' }} type='button' className='buttonSrch' onClick={this.handleClick}> <img className='playButton' src={this.state.playButton} alt='play button' /> </button></p>
+        <p className='trackSrch'> {this.props.name} | {this.props.artistName} | {this.props.albName} | {this.props.pop} <button style={{ backgroundImage: `url(${uri})`, backgroundSize: 'contain' }} type='button' className='buttonSrch' onClick={this.handleClick}> <img className='playButton' src={this.state.playButton} alt='play button' /> </button> </p>
       )
     } else {
       return (
